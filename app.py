@@ -14,8 +14,8 @@ def index():
     # b) your API key, 'key'
     # c) how many GIFs to return, 'limit'
 
-    # TODO: Make an API call to Tenor using the 'requests' library. For 
-    # reference on how to use Tenor, see: 
+    # TODO: Make an API call to Tenor using the 'requests' library. For
+    # reference on how to use Tenor, see:
     # https://tenor.com/gifapi/documentation
 
     # TODO: Use the '.json()' function to get the JSON of the returned response
