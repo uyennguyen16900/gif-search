@@ -13,11 +13,11 @@ def index():
 
     # TODO: Make 'params' dictionary containing:
 
-     # a) the query term, 'q' 
+     # a) the query term, 'q'
      # b) your API key, 'key'
      # c) how many GIFs to return, 'limit'
-    params = { 
-        "q" : query_term, 
+    params = {
+        "q" : search_term,
         "Key" : "FGUMZP8TJDG6",
         "lmt" : 10
     }
@@ -28,25 +28,25 @@ def index():
     # https://tenor.com/gifapi/documentation
 
     response = requests.get(
-        'https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s' % (params.get("search_term"),  params.get("Key"), params.get("lmt")),
+        'https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s' % (params.get("q"), params.get("Key"), params.get("lmt")),
         params = params)
 
 
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
-    
+
     gif_json = response.json()
 
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
 
-    gif_str = gif_json["results"]
+    gifs = gif_json["results"]
 
 
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gifs= gif_str)
+    return render_template("index.html", gifs=gifs)
 
 if __name__ == '__main__':
     app.run(debug=True)
