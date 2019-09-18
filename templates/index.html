@@ -5,13 +5,13 @@
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
 {% block content %}
-  <form target="/">
+  <form action="/">
     <input type="text" name="search_term" placeholder="Search for GIFs"/>
-    <button type="button" name="button">Search</button>
+    <button type="submit" name="button" >Search</button>
   </form>
   <!-- Make a for loop to loop over GIFs passed in from the server -->
   {% for gif in gifs %}
-    <a href="templates/gif.html"></a>
+    {% include 'gif.html' %}
   {% endfor %}
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->

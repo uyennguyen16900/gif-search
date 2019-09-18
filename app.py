@@ -46,7 +46,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gifs=gifs)
+    return render_template("index.html", gifs=gifs,query=search_term)
 
 if __name__ == '__main__':
     app.run(debug=True)
