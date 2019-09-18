@@ -1,12 +1,18 @@
 <!-- templates/index.html -->
-
-
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
-
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
+<!-- Extend 'base.html' and put content into a block 'body' to match -->
+{% extends 'base.html' %}
+<!-- Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
-
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
+{% block content %}
+  <form target="/">
+    <input type="text" name="search_term" placeholder="Search for GIFs"/>
+    <button type="button" name="button">Search</button>
+  </form>
+  <!-- Make a for loop to loop over GIFs passed in from the server -->
+  {% for gif in gifs %}
+    <a href="templates/gif.html"></a>
+  {% endfor %}
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
+{% endblock %}
