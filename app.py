@@ -27,14 +27,17 @@ def index():
         'https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s' % (params.get("q"), params.get("Key"), params.get("lmt")),
         params = params)
 
+    if response.status_code == 200:
+        gifs = response.json()["results"]
+    else:
+        gifs = None
+
 
     # Use the '.json()' function to get the JSON of the returned response
     # object
-    gif_json = response.json()
 
     # Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
-    gifs = gif_json["results"]
 
     # Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
