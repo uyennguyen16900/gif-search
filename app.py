@@ -13,11 +13,11 @@ def index():
 
     # TODO: Make 'params' dictionary containing:
 
-     # a) the query term, 'q' 
+     # a) the query term, 'q'
      # b) your API key, 'key'
      # c) how many GIFs to return, 'limit'
-    params = { 
-        "q" : query_term, 
+    params = {
+        "q" : query_term,
         "Key" : "FGUMZP8TJDG6",
         "lmt" : 10
     }
@@ -34,9 +34,9 @@ def index():
 
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
-    
+
     gif_json = response.json()
-    
+
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
 
@@ -46,12 +46,9 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-<<<<<<< HEAD
+
     return render_template("index.html", gifs=gifs,query=search_term)
 
-=======
-    return render_template("index.html")
-    
->>>>>>> e83271041bbab622137dd45553fc52af9bcda5a8
+
 if __name__ == '__main__':
     app.run(debug=True)
