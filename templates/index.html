@@ -6,10 +6,15 @@
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
 {% block content %}
-  <form action="/">
-    <input type="text" name="search_term" placeholder="Search for GIFs"/>
-    <button type="submit" name="button" >Search</button>
-  </form>
+  <h1>Gif Search</h1>
+  <div class="search-box">
+    <form action="/">
+      <input type="text" name="search_term" placeholder="Search for GIFs"/>
+      <button type="submit" name="button">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
   <!-- Make a for loop to loop over GIFs passed in from the server -->
   <div class="container">
     {% if gifs|length == 0 %}
