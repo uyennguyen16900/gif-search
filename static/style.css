@@ -1,6 +1,6 @@
 body {
-  background-color: rgb(216, 14, 0);
-  color: red;
+  background-color: red;
+  color: white;
   font-size: 200%;
   font-family: verdana;
   text-align: center;
@@ -37,6 +37,7 @@ h2 {
   color: black;
 }
 
+
 .container {
   margin-top: 100px;
   display: grid;
@@ -44,4 +45,20 @@ h2 {
   /* grid-template-columns: auto auto auto; */
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+}
+
+.tenor-gif-embed {
+  max-width: 32vw;
+  padding: 0;
+  margin: 0;
+}
+
+.gif_container {
+  margin-top: 100px;
+  border: 2px blue;
+  display: inline-flex;
+  width: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
 }
