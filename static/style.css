@@ -1,6 +1,13 @@
 body {
-  background-color: #F0F8FF;
+  background-color: rgb(216, 14, 0);
+  color: red;
+  font-size: 200%
+  font-family: verdana;
   text-align: center;
+}
+
+nav {
+  background-color: rgb(255, 248, 240);
 }
 
 input {
@@ -33,7 +40,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.container {
+.gif_container {
   margin-top: 100px;
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
