@@ -12,15 +12,18 @@ nav {
 
 input {
   margin: 10px;
-  width: 60%;
-  height: 5px;
+  height: 40px;
+  width: 70%;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 5px;
 }
 
 button {
-  background-color: #66a3ff;
-  border-radius: 12px;
+  background-color: black;
+  border-radius: 40px;
   color: white;
-  padding: 5px 5px;
+  padding: 20px 20px;
 }
 
 h1 {
@@ -30,21 +33,15 @@ h1 {
   text-shadow: 3px 2px #bab8b9;
 }
 
-.search-box {
-  border-radius: 40px;
-  height: 20px;
-  left: 50%;
-  padding: 1em;
-  position: absolute;
-  top: 15%;
-  transform: translate(-50%, -50%);
+h2 {
+  color: black;
 }
 
-.gif_container {
+.container {
   margin-top: 100px;
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: auto auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: auto auto auto; */
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
