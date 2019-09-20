@@ -24,9 +24,9 @@ def index():
     # reference on how to use Tenor, see:
     # https://tenor.com/gifapi/documentation
     response = requests.get(
-        'https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s' % (params.get("q"), params.get("Key"), params.get("lmt")),
-        # 'https://api.tenor.com/v1/search', params=params)
+        'https://api.tenor.com/v1/search?limit=%s' % (params.get("lmt")),
         params=params)
+        # 'https://api.tenor.com/v1/search', params=params)
 
     if response.status_code == 200:
         gifs = response.json()["results"]

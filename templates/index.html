@@ -9,22 +9,23 @@
   <h1>Gif Search</h1>
   <div class="search-box">
     <form action="/">
-      <input type="text" name="search_term" placeholder="Search for GIFs"/>
+      <span class="text-box">
+        <input type="text" name="search_term" placeholder="Search for GIFs"/>
+      </span>
       <button type="submit" name="button">
-        <i class="fas fa-search"></i>
+        <span class="fas fa-search"></span>
       </button>
     </form>
   </div>
   <!-- Make a for loop to loop over GIFs passed in from the server -->
   <div class="container">
     {% if gifs|length == 0 %}
-      <h1>GIFs not found! Try another search query.</h1>
+      <h2>GIFs not found! Try another search query.</h2>
     {% endif %}
     {% for gif in gifs %}
       {% include 'gif.html' %}
     {% endfor %}
   </div>
-
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 {% endblock %}
