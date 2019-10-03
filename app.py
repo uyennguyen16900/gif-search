@@ -1,6 +1,12 @@
 from flask import Flask, render_template, request
 import requests
 import json
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 
 app = Flask(__name__)
 
@@ -16,7 +22,7 @@ def index():
      # c) how many GIFs to return, 'limit'
     params = {
         "q" : search_term,
-        "Key" : "FGUMZP8TJDG6",
+        "Key" : TENOR_API_KEY,
         "lmt" : 10
     }
 
